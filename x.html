@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background-color: white;
+      font-family: Helvetica;
+    }
+
+    .tweet-section{
+      display: grid;
+      grid-template-columns: 600px;
+      row-gap: 20px;
+    }
+
+    .general-tweet {
+      display: flex;
+      flex-direction: row;
+      column-gap: 15px;
+    }
+
+    .tweet-block{
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    .pfp {
+      margin-top: 5px;
+      width: 45px;
+      border-radius: 25px;
+      border: none;
+    }
+
+    .user-name {
+      display: flex;
+      align-items: center;
+      column-gap: 2px;
+      font-weight: bold;
+    }
+
+    .user-name span {
+      font-weight: normal;
+      color: grey;
+      font-size: 15px;
+    }
+
+    .user-handle {
+      display: flex;
+    }
+
+    .grok-logo {
+      width: 20px;
+    }
+
+    .user-handle {
+      width: 490px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .tweet-content {
+      width: 500px;
+      white-space: pre-line;
+      font-size: 15px;
+    }
+
+    .verified-tick {
+      height: 18px;
+    }
+
+    .action-bar {
+      display: flex;
+      width: 490px;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+
+    .action-bar img {
+      display: inline-block;
+      width: 18px;
+    }
+
+    .action-div {
+      display: flex;
+      align-items: center;
+      column-gap: 6px;
+      font-size: 14px;
+    }
+
+    svg{
+      fill: invert;
+      width: 20px;
+      height: 20px;
+    }
+
+    .options{
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="tweet-section">
+
+    <div class="general-tweet">
+      <div class="pfp-block">
+        <img class="pfp" src="../channelpic/channel-1.jpeg">
+      </div>
+      <div class="tweet-block">
+        <div class="user-handle">
+          <div class="user-name">
+            Rahul Gandhi <img class="verified-tick" src="icons/Twitter_Verified_Badge.svg"> <span>@RahulGandhi &middot;
+              Jul 31</span>
+          </div>
+          <div class="options">
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path d="M18.542 30.532l15.956-11.776c.783-.576 1.902-.354 2.274.545 1.962 4.728 1.084 10.411-2.819 14.315-3.903 3.901-9.333 4.756-14.299 2.808l-5.423 2.511c7.778 5.315 17.224 4 23.125-1.903 4.682-4.679 6.131-11.058 4.775-16.812l.011.011c-1.966-8.452.482-11.829 5.501-18.735C47.759 1.332 47.88 1.166 48 1l-6.602 6.599V7.577l-22.86 22.958M15.248 33.392c-5.582-5.329-4.619-13.579.142-18.339 3.521-3.522 9.294-4.958 14.331-2.847l5.412-2.497c-.974-.704-2.224-1.46-3.659-1.994-6.478-2.666-14.238-1.34-19.505 3.922C6.904 16.701 5.31 24.488 8.045 31.133c2.044 4.965-1.307 8.48-4.682 12.023C2.164 44.411.967 45.67 0 47l15.241-13.608"/></svg>
+            <img class="more" src="icons/three-dots.svg">
+          </div>
+        </div>
+        <div class="tweet-content">THE INDIAN ECONOMY IS DEAD.
+
+          Modi killed it.
+
+          1. Adani-Modi partnership
+          2. Demonetisation and a flawed GST
+          3. Failed "Assemble in India"
+          4. MSMEs wiped out
+          5. Farmers crushed
+
+          Modi has destroyed the future of India's youth because there are no jobs.
+        </div>
+        <div class="action-bar">
+          <div class="action-div">
+            <img src="icons/comment-1-svgrepo-com.svg"> 15k
+          </div>
+          <div class="action-div">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi"><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></svg>
+          </div>
+          <div class="action-div">
+            <img src="icons/heart-svgrepo-com.svg"> 66k
+          </div>
+          <div class="action-div">
+            <img src="icons/stats-chart-svgrepo-com.svg"> 7M
+          </div>
+          <div class="action-div">
+            <img src="icons/bookmark-svgrepo-com.svg">
+            <img src="icons/upload-minimalistic-svgrepo-com (1).svg">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="general-tweet">
+      <div class="pfp-block">
+        <img class="pfp" src="../channelpic/channel-2.jpeg">
+      </div>
+      <div class="tweet-block">
+        <div class="user-handle">
+          <div class="user-name">
+            Mark <img class="verified-tick" src="icons/Twitter_Verified_Badge.svg"> <span>@markiplier &middot;
+              2024 Aug 15</span>
+          </div>
+          <div class="options">
+            <img class="grok-logo" src="icons/icons8-grok.svg">
+            <img class="more" src="icons/three-dots.svg">
+          </div>
+        </div>
+        <div class="tweet-content">Amy, Chica, Henry, and I are all safe and sound. The fires in LA are beyond intense and still spreading but rest assured I am on top of the most current info and staying safe. I hope you are doing the same, thank you.
+        </div>
+        <div class="action-bar">
+          <div class="action-div">
+            <img src="icons/comment-1-svgrepo-com.svg"> 1.2k
+          </div>
+          <div class="action-div">
+            <img src="icons/retweet-svgrepo-com.svg"> 6.5k
+          </div>
+          <div class="action-div">
+            <img src="icons/heart-svgrepo-com.svg"> 136k
+          </div>
+          <div class="action-div">
+            <img src="icons/stats-chart-svgrepo-com.svg"> 1.7M
+          </div>
+          <div class="action-div">
+            <img src="icons/bookmark-svgrepo-com.svg">
+            <img src="icons/upload-minimalistic-svgrepo-com (1).svg">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="general-tweet">
+      <div class="pfp-block">
+        <img class="pfp" src="../channelpic/channel-1.jpeg">
+      </div>
+      <div class="tweet-block">
+        <div class="user-handle">
+          <div class="user-name">
+            Rahul Gandhi <img class="verified-tick" src="icons/Twitter_Verified_Badge.svg"> <span>@RahulGandhi &middot;
+              Jul 31</span>
+          </div>
+          <div class="options">
+            <img class="grok-logo" src="icons/icons8-grok.svg">
+            <img class="more" src="icons/three-dots.svg">
+          </div>
+        </div>
+        <div class="tweet-content">THE INDIAN ECONOMY IS DEAD.
+
+          Modi killed it.
+
+          1. Adani-Modi partnership
+          2. Demonetisation and a flawed GST
+          3. Failed "Assemble in India"
+          4. MSMEs wiped out
+          5. Farmers crushed
+
+          Modi has destroyed the future of India's youth because there are no jobs.
+        </div>
+        <div class="action-bar">
+          <div class="action-div">
+            <img src="icons/comment-1-svgrepo-com.svg"> 15k
+          </div>
+          <div class="action-div">
+            <img src="icons/retweet-svgrepo-com.svg"> 19k
+          </div>
+          <div class="action-div">
+            <img src="icons/heart-svgrepo-com.svg"> 66k
+          </div>
+          <div class="action-div">
+            <img src="icons/stats-chart-svgrepo-com.svg"> 7M
+          </div>
+          <div class="action-div">
+            <img src="icons/bookmark-svgrepo-com.svg">
+            <img src="icons/upload-minimalistic-svgrepo-com (1).svg">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="general-tweet">
+      <div class="pfp-block">
+        <img class="pfp" src="../channelpic/channel-1.jpeg">
+      </div>
+      <div class="tweet-block">
+        <div class="user-handle">
+          <div class="user-name">
+            Rahul Gandhi <img class="verified-tick" src="icons/Twitter_Verified_Badge.svg"> <span>@RahulGandhi &middot;
+              Jul 31</span>
+          </div>
+          <div class="options">
+            <img class="grok-logo" src="icons/icons8-grok.svg">
+            <img class="more" src="icons/three-dots.svg">
+          </div>
+        </div>
+        <div class="tweet-content">THE INDIAN ECONOMY IS DEAD.
+
+          Modi killed it.
+
+          1. Adani-Modi partnership
+          2. Demonetisation and a flawed GST
+          3. Failed "Assemble in India"
+          4. MSMEs wiped out
+          5. Farmers crushed
+
+          Modi has destroyed the future of India's youth because there are no jobs.
+        </div>
+        <div class="action-bar">
+          <div class="action-div">
+            <img src="icons/comment-1-svgrepo-com.svg"> 15k
+          </div>
+          <div class="action-div">
+            <img src="icons/retweet-svgrepo-com.svg"> 19k
+          </div>
+          <div class="action-div">
+            <img src="icons/heart-svgrepo-com.svg"> 66k
+          </div>
+          <div class="action-div">
+            <img src="icons/stats-chart-svgrepo-com.svg"> 7M
+          </div>
+          <div class="action-div">
+            <img src="icons/bookmark-svgrepo-com.svg">
+            <img src="icons/upload-minimalistic-svgrepo-com (1).svg">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+.right-header {
+    width: 100%;
+    height: 49px;
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    z-index: 5;
+}
+
+.search-bar-container {
+    position: relative;
+    margin-top: 5px;
+}
+
+.search-bar {
+    margin-left: 30px;
+    width: 350px;
+    height: 43px;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 25px;
+}
+
+.search-bar::placeholder {
+    padding-left: 30px;
+    color: black;
+}
+
+.search-icon {
+    position: absolute;
+    width: 28px;
+    height: 16px;
+    top: 13px;
+    left: 36px;
+    fill: rgb(96, 96, 96);
+}
+
+.right-section-flexbox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+}
+
+.sub-to-premium {
+    margin-top: 12px;
+    width: 316px;
+    margin-left: 30px;
+    border: 1px solid rgb(236, 236, 236);
+    padding: 12px 16px;
+    border-radius: 10px;
+}
+
+.heading {
+    margin: 0px;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.sub-to-premium .heading {
+    padding-bottom: 0px;
+}
+
+.body-prem {
+    font-size: 15px;
+}
+
+.subscribe-button {
+    background-color: rgb(29, 155, 240);
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+    padding: 9px 17px;
+    border-radius: 20px;
+}
+
+.heading {
+    padding-bottom: 12px;
+}
+
+.news {
+    padding: 16px;
+    width: 316px;
+    margin-left: 30px;
+    border: 1px solid rgb(236, 236, 236);
+    border-radius: 15px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    width: 17px;
+    top: 18px;
+    right: 22px;
+}
+
+.news-box {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.news-box:last-child {
+    padding-bottom: 0px;
+}
+
+.headline {
+    margin: 0px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.news-headline {
+    margin-bottom: 8px;
+}
+
+.news-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.news-engagement {
+    width: 22px;
+    position: absolute;
+    height: 22px;
+    border-radius: 20px;
+    border: 1.5px solid white;
+    object-fit: cover;
+}
+
+.liked-by {
+    position: relative;
+}
+
+.news-info {
+    font-size: 13px;
+    color: rgb(83, 100, 113);
+    padding-top: 4px;
+    padding-left: 60px;
+}
+
+.trending {
+    padding: 16px;
+    width: 316px;
+    margin-left: 30px;
+    border: 1px solid rgb(236, 236, 236);
+    border-radius: 15px;
+}
+
+.trend-box {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.trend-box:last-child {
+    padding-bottom: 0px;
+}
+
+.topics,
+.post-count {
+    font-size: 13px;
+    color: rgb(83, 100, 113);
+}
+
+.hashtag {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+.more-button {
+    position: absolute;
+    width: 18px;
+    top: 12px;
+    right: 0px;
+    fill: rgb(96, 96, 96);
+}
+
+.show-more {
+    color: rgb(29, 161, 242);
+    margin-top: 12px;
+}
+
+.who-to-follow {
+    padding: 16px;
+    width: 316px;
+    margin-left: 30px;
+    border: 1px solid rgb(236, 236, 236);
+    border-radius: 15px;
+}
+
+.follow-box,
+.pfp-box,
+.follow-button-container {
+    display: flex;
+    align-items: center;
+}
+
+
+.follow-box {
+    display: flex;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+.follow-box-pfp {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+}
+
+.name {
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.name-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-detail-box {
+    margin-left: 8px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.user-adderss {
+    color: rgb(83, 100, 113);
+    display: block;
+    font-size: 14.5px;
+    margin: 0;
+}
+
+.follow-button {
+    color: white;
+    background-color: black;
+    border: none;
+    font-weight: bold;
+    font-size: 13px;
+    width: 78px;
+    height: 32px;
+    border-radius: 20px;
+}
+
+.tos-section {
+    padding-left: 16px;
+    width: 316px;
+    margin-left: 30px;
+    font-size: 11px;
+    white-space: pre-line;
+    line-height: 25px;
+    color: rgb(83, 100, 113);
+}
+
+.tos-element {
+    margin-right: 5px;
+    margin-left: 7px;
+}
+
+.tos-element:first-child {
+    margin-left: 0px;
+}

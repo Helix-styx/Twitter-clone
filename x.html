@@ -2,327 +2,14 @@
 <html>
 
 <head>
-  <style>
-    body {
-      background-color: white;
-      font-family: Helvetica;
-      margin-top: 53px;
-    }
-
-    .tweet-section {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-
-    .general-tweet {
-      width: 582px;
-      padding-top: 8px;
-      padding-left: 15px;
-      padding-bottom: 8px;
-      column-gap: 14px;
-      display: flex;
-      flex-direction: row;
-      border-left: 1px solid rgb(236, 236, 236);
-      border-right: 1px solid rgb(236, 236, 236);
-      border-bottom: 1px solid rgb(236, 236, 236);
-    }
-
-    .general-tweet:first-child {
-      border-top: 1px solid rgb(236, 236, 236);
-    }
-
-    .tweet-block {
-      display: flex;
-      flex-direction: column;
-      row-gap: 10px;
-      padding-top: 5px;
-    }
-
-    .pfp {
-      margin-top: 5px;
-      width: 40px;
-      border-radius: 25px;
-      border: none;
-    }
-
-    .user-name {
-      font-weight: bold;
-    }
-
-    .user-handle {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .tweet-content {
-      width: 508px;
-      white-space: pre-line;
-      font-size: 15px;
-    }
-
-    .action-bar {
-      display: flex;
-      width: 508px;
-      justify-content: space-between;
-      margin-top: 5px;
-      color: rgb(96, 96, 96);
-    }
-
-    .action-div {
-      display: flex;
-      align-items: center;
-      column-gap: 3px;
-      font-size: 14px;
-    }
-
-    .options svg,
-    .action-bar svg {
-      fill: rgb(96, 96, 96);
-      width: 20px;
-      height: 20px;
-    }
-
-    .options {
-      display: flex;
-      align-items: center;
-      column-gap: 5px;
-    }
-
-    .user-details {
-      display: flex;
-      align-items: center;
-      column-gap: 2px;
-    }
-
-    .user-addr {
-      font-weight: normal;
-      color: grey;
-      font-size: 15px;
-    }
-
-    .verified-mark {
-      fill: rgb(29, 161, 242);
-      width: 20px;
-      height: 20px;
-    }
-
-    .create-post {
-      display: flex;
-      padding-left: 15px;
-      column-gap: 10px;
-      width: 582px;
-      border-left: 1px solid rgb(236, 236, 236);
-      border-right: 1px solid rgb(236, 236, 236);
-      border-bottom: 1px solid rgb(236, 236, 236);
-      padding-bottom: 10px;
-    }
-
-    .create-post img {
-      margin-top: 15px;
-    }
-
-    .write-post {
-      width: 508px;
-      border: none;
-      height: 40px;
-      margin-bottom: 0px;
-      margin-top: 4px;
-      font-size: 22px;
-    }
-
-    .write-post::placeholder {
-      font-size: 22px;
-    }
-
-    .write-post:focus {
-      outline: none;
-    }
-
-    .post-creation {
-      display: flex;
-      flex-direction: column;
-      padding-top: 10px;
-    }
-
-    .post-privacy {
-      color: rgb(29, 155, 240);
-      display: flex;
-      align-items: center;
-      width: 490px;
-      height: 40px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid rgb(236, 236, 236);
-      font-weight: bold;
-      font-size: 15px;
-      column-gap: 4px;
-    }
-
-    .post-privacy-status {
-      fill: rgb(29, 155, 240);
-      width: 18px;
-      height: 18px;
-    }
-
-    .post-tools {
-      display: grid;
-      grid-template-columns: repeat(7, 35px) 1fr;
-    }
-
-    .post-tool {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      height: 35px;
-    }
-
-    .post-tool svg {
-      fill: rgb(29, 155, 240);
-      height: 20px;
-      width: 20px;
-    }
-
-    .post-button-container {
-      display: flex;
-      justify-content: end;
-      align-items: center;
-    }
-
-    .post-button {
-      color: white;
-      font-weight: bold;
-      background-color: black;
-      border: none;
-      border-radius: 20px;
-      font-size: 15px;
-      padding: 10px 20px 10px 20px;
-    }
-
-    .more-posts {
-      display: flex;
-      width: 597px;
-      justify-content: center;
-      align-items: center;
-      height: 45px;
-      color: rgb(29, 155, 240);
-      border-left: 1px solid rgb(236, 236, 236);
-      border-right: 1px solid rgb(236, 236, 236);
-    }
-
-    .header {
-      position: fixed;
-      top: 0;
-      width: 597px;
-      display: flex;
-      height: 53px;
-      border-left: 1px solid rgb(236, 236, 236);
-      border-right: 1px solid rgb(236, 236, 236);
-      border-bottom: 1px solid rgba(236, 236, 236, 0.8);
-      background-color: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(12px);
-    }
-
-    .header-fyp,
-    .header-following {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .main-container {
-      display: flex;
-    }
-
-    .left-section {
-      flex: 1;
-      flex-shrink: 0.5;
-    }
-
-    .middle-section {
-      width: 600px;
-    }
-
-    .right-section {
-      width: 475px;
-    }
-
-    .left-section {
-      display: flex;
-      justify-content: end;
-      min-width: 72px;
-      overflow: hidden;
-    }
-
-    .sidebar {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      display: grid;
-      grid-template-rows: repeat(10, 52px);
-    }
-
-    .sidebar-logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 90px;
-    }
-
-    .sidebar-logo-container:first-child{
-      height: 56px;
-    }
-
-    .sidebar-logo-container:last-child{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 80px;
-    }
-
-    .subcontainer{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 40px;
-      width: 40px;
-      font-size: 22px;
-      background-color: rgb(0,150,157);
-      color: white;
-      border: none;
-      border-radius: 25px;
-    }
-
-    .sidebar-logo {
-      width: 26px;
-      height: 26px;
-    }
-
-    .twitter-logo {
-      width: 50px;
-      height: 30px;
-    }
-
-    .post-logo{
-      fill: white;
-      width: 24px;
-      height: 24px;
-    }
-
-    .post-logo-container{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: black;
-      width: 51px;
-      height: 51px;
-      border: none;
-      border-radius: 25px;
-    }
-  </style>
+  <title>Twitter-Clone</title>
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="floatingrok.css">
+  <link rel="stylesheet" href="middlesection.css">
+  <link rel="stylesheet" href="rightsection.css">
+  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="tweetsection.css">
 </head>
 
 <body>
@@ -405,12 +92,12 @@
         <div class="sidebar-logo-container ">
           <div class="post-logo-container">
             <svg viewBox="0 0 24 24" aria-hidden="true" class="sidebar-logo post-logo">
-            <g>
-              <path
-                d="M23 3c-6.62-.1-10.38 2.421-13.05 6.03C7.29 12.61 6 17.331 6 22h2c0-1.007.07-2.012.19-3H12c4.1 0 7.48-3.082 7.94-7.054C22.79 10.147 23.17 6.359 23 3zm-7 8h-1.5v2H16c.63-.016 1.2-.08 1.72-.188C16.95 15.24 14.68 17 12 17H8.55c.57-2.512 1.57-4.851 3-6.78 2.16-2.912 5.29-4.911 9.45-5.187C20.95 8.079 19.9 11 16 11zM4 9V6H1V4h3V1h2v3h3v2H6v3H4z">
-              </path>
-            </g>
-          </svg>
+              <g>
+                <path
+                  d="M23 3c-6.62-.1-10.38 2.421-13.05 6.03C7.29 12.61 6 17.331 6 22h2c0-1.007.07-2.012.19-3H12c4.1 0 7.48-3.082 7.94-7.054C22.79 10.147 23.17 6.359 23 3zm-7 8h-1.5v2H16c.63-.016 1.2-.08 1.72-.188C16.95 15.24 14.68 17 12 17H8.55c.57-2.512 1.57-4.851 3-6.78 2.16-2.912 5.29-4.911 9.45-5.187C20.95 8.079 19.9 11 16 11zM4 9V6H1V4h3V1h2v3h3v2H6v3H4z">
+                </path>
+              </g>
+            </svg>
           </div>
         </div>
         <div class="sidebar-logo-container">
@@ -927,7 +614,221 @@
 
       </div>
     </div>
-    <div class="right-section"></div>
+    <div class="right-section">
+      <div class="right-header">
+        <div class="search-bar-container">
+          <input type="search" class="search-bar" placeholder="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+            <g>
+              <path
+                d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z">
+              </path>
+            </g>
+          </svg>
+        </div>
+
+      </div>
+      <div class="right-section-flexbox">
+        <div class="sub-to-premium">
+          <p class="heading">Subscribe to Premium</p>
+          <p class="body-prem">Subscribe to unlock new features and if eligible, receive a share of revenue.</p>
+          <div class="subscribe-button-container">
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+
+        </div>
+
+        <div class="news">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="close-button" style="color: rgb(15, 20, 25);">
+            <g>
+              <path
+                d="M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z">
+              </path>
+            </g>
+          </svg>
+          <p class="heading">Today's News</p>
+          <div class="news-box">
+            <div class="news-headline">
+              <p class="headline">3 Autistic Niggas found having gay orgy together</p>
+            </div>
+            <div class="news-details">
+              <div class="liked-by">
+                <img class="news-engagement" src="../thumbnails/chutkit.jpg" style="z-index: 3; left: 0px;">
+                <img class="news-engagement" src="../thumbnails/sohan.jpg" style="z-index: 2; left: 14px;">
+                <img class="news-engagement" src="../thumbnails/utcrashout.jpg" style="z-index: 1; left: 28px;">
+              </div>
+              <div class="news-info">3 hours ago &middot; News &middot; 1,937 posts</div>
+            </div>
+          </div>
+          <div class="news-box">
+            <div class="news-headline">
+              <p class="headline">NASA-ISRO Deploys the World's Largest Radar Antenna in Orbit</p>
+            </div>
+            <div class="news-details">
+              <div class="liked-by">
+                <img class="news-engagement" src="../thumbnails/thumbnail-10.webp" style="z-index: 3; left: 0px;">
+                <img class="news-engagement" src="../thumbnails/thumbnail-12.webp" style="z-index: 2; left: 14px;">
+                <img class="news-engagement" src="../thumbnails/thumbnail-6.webp" style="z-index: 1; left: 28px;">
+              </div>
+              <div class="news-info">10 hours ago &middot; Tech &middot; 2,055 posts</div>
+            </div>
+          </div>
+          <div class="news-box">
+            <div class="news-headline">
+              <p class="headline">Parker Solar Probe Confirms 70-Year Solar Theory on Magnetic Reconnection</p>
+            </div>
+            <div class="news-details">
+              <div class="liked-by">
+                <img class="news-engagement" src="../channelpic/channel-2.jpeg" style="z-index: 3; left: 0px;">
+                <img class="news-engagement" src="../channelpic/channel-10.jpeg" style="z-index: 2; left: 14px;">
+                <img class="news-engagement" src="../thumbnails/thumbnail-7.webp" style="z-index: 1; left: 28px;">
+              </div>
+              <div class="news-info">20 hours ago &middot; Science &middot; 1,067 posts</div>
+            </div>
+          </div>
+        </div>
+        <div class="trending">
+          <p class="heading">What's happening</p>
+          <div class="trend-box">
+            <div class="topics">Trending in India</div>
+            <div class="hashtag">#earthquake</div>
+            <div class="post-count">1.7k posts</div>
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="more-button">
+              <g>
+                <path
+                  d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z">
+                </path>
+              </g>
+            </svg>
+          </div>
+          <div class="trend-box">
+            <div class="topics">Science &middot; Trending</div>
+            <div class="hashtag">#NationalSpaceDay</div>
+            <div class="post-count">12.2k posts</div>
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="more-button">
+              <g>
+                <path
+                  d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z">
+                </path>
+              </g>
+            </svg>
+          </div>
+          <div class="trend-box">
+            <div class="topics">Entertainment &middot; Trending</div>
+            <div class="hashtag">#Haiwaan</div>
+            <div class="post-count">3.1k posts</div>
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="more-button">
+              <g>
+                <path
+                  d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z">
+                </path>
+              </g>
+            </svg>
+          </div>
+          <div class="trend-box">
+            <div class="topics">Fitness &middot; Trending</div>
+            <div class="hashtag">Mind Body Balance</div>
+            <div class="post-count">21.7k posts</div>
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="more-button">
+              <g>
+                <path
+                  d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z">
+                </path>
+              </g>
+            </svg>
+          </div>
+          <div class="show-more">Show more</div>
+        </div>
+        <div class="who-to-follow">
+          <p class="heading">Who to follow</p>
+          <div class="follow-box">
+            <div class="pfp-box">
+              <img class="follow-box-pfp" src="../channelpic/channel-2.jpeg">
+            </div>
+            <div class="user-detail-box">
+              <div class="name-div">
+                <div class="name">Mark
+                  <svg viewBox="0 0 22 22" aria-label="Verified account" role="img" class="verified-mark"
+                    data-testid="icon-verified">
+                    <g>
+                      <path
+                        d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z">
+                      </path>
+                    </g>
+                  </svg>
+                </div>
+                <div class="user-adderss">@markiplier</div>
+              </div>
+              <div class="follow-button-container">
+                <button class="follow-button">Follow</button>
+              </div>
+            </div>
+          </div>
+          <div class="follow-box">
+            <div class="pfp-box">
+              <img class="follow-box-pfp" src="../channelpic/channel-6.jpeg">
+            </div>
+            <div class="user-detail-box">
+              <div class="name-div">
+                <div class="name">Beast
+                  <svg viewBox="0 0 22 22" aria-label="Verified account" role="img" class="verified-mark"
+                    data-testid="icon-verified">
+                    <g>
+                      <path
+                        d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z">
+                      </path>
+                    </g>
+                  </svg>
+                </div>
+                <div class="user-adderss">@beastYT</div>
+              </div>
+              <div class="follow-button-container">
+                <button class="follow-button">Follow</button>
+              </div>
+            </div>
+          </div>
+          <div class="follow-box">
+            <div class="pfp-box">
+              <img class="follow-box-pfp" src="../channelpic/my-channel.jpeg">
+            </div>
+            <div class="user-detail-box">
+              <div class="name-div">
+                <div class="name">SSDev
+                  <svg viewBox="0 0 22 22" aria-label="Verified account" role="img" class="verified-mark"
+                    data-testid="icon-verified">
+                    <g>
+                      <path
+                        d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z">
+                      </path>
+                    </g>
+                  </svg>
+                </div>
+                <div class="user-adderss">@simpledev
+                </div>
+              </div>
+              <div class="follow-button-container">
+                <button class="follow-button">Follow</button>
+              </div>
+            </div>
+          </div>
+          <div class="show-more">Show more</div>
+        </div>
+        <div class="tos-section"><span class="tos-element"><a>Terms of Service</a></span> | <span
+            class="tos-element"><a>Privacy Policy</a></span> | <span class="tos-element"><a>Cookie Policy</a></span> |
+          <span class="tos-element" style="margin-left: 0px; font-size: 12px;"><a>Accessibility</a></span> | <span
+            class="tos-element" style="font-size: 12px;"><a>Ads info</a></span> | <span class="tos-element"
+            style="font-size: 13px;"><a>More</a>&middot;&middot;&middot;</span> <span class="tos-element">&copy; 2025 X Corp.</span>
+        </div>
+        <div class="grok-ai-logo-container">
+          <svg viewBox="0 0 33 32" aria-hidden="true" class="grok-ai-logo">
+            <g>
+              <path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466">
+              </path>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
   </div>
 
 

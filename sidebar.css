@@ -1,0 +1,65 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: repeat(10, 52px);
+}
+
+.sidebar-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+}
+
+.sidebar-logo-container:first-child {
+    height: 56px;
+}
+
+.sidebar-logo-container:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.subcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    background-color: rgb(0, 150, 157);
+    color: white;
+    border: none;
+    border-radius: 25px;
+}
+
+.sidebar-logo {
+    width: 26px;
+    height: 26px;
+}
+
+.twitter-logo {
+    width: 50px;
+    height: 30px;
+}
+
+.post-logo {
+    fill: white;
+    width: 24px;
+    height: 24px;
+}
+
+.post-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 51px;
+    height: 51px;
+    border: none;
+    border-radius: 25px;
+}

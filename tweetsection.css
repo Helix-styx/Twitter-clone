@@ -96,3 +96,53 @@
     width: 20px;
     height: 20px;
 }
+
+.sub-tweets{
+    padding: 10px;
+    white-space: normal;
+    border: 1px solid rgb(208, 208, 208);
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+.sub-tweet-user-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 3px;
+    margin-bottom: 8px;
+}
+
+.sub-tweet-pfp-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    
+}
+
+.sub-tweet-pfp{
+    width: 24px;
+}
+
+.tweet-images{
+    display: flex;
+    white-space: normal;
+    flex-direction: row;
+    column-gap: 2px;
+}
+
+.tweet-image1{
+    width: 252px;
+    height: 291px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.tweet-image2{
+    width: 252px;
+    height: 291px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}

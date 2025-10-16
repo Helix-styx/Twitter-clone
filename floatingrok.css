@@ -10,6 +10,13 @@
     justify-content: center;
     border-radius: 16px;
     box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 15px 0px, rgba(101, 119, 134, 0.15) 0px 0px 3px 1px;
+    transition: background-color 0.2s;
+    background-color: white;
+    cursor: pointer;
+}
+
+.grok-ai-logo-container:hover{
+    background-color: rgba(29, 155, 240,0.1);
 }
 
 .grok-ai-logo{

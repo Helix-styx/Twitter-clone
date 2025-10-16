@@ -14,6 +14,8 @@
     border-left: 1px solid rgb(236, 236, 236);
     border-right: 1px solid rgb(236, 236, 236);
     border-bottom: 1px solid rgb(236, 236, 236);
+    cursor: pointer;
+    transition: background-color 0.15s;
 }
 
 .general-tweet:first-child {
@@ -24,7 +26,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    padding-top: 5px;
 }
 
 .pfp {
@@ -36,6 +37,11 @@
 
 .user-name {
     font-weight: bold;
+}
+
+.user-name:hover,
+.date-time:hover{
+    text-decoration: underline;
 }
 
 .user-handle {
@@ -62,8 +68,29 @@
 .action-div {
     display: flex;
     align-items: center;
-    column-gap: 3px;
+    column-gap: 0px;
     font-size: 14px;
+    transition: color 0.15s;
+    position: relative;
+}
+
+.action-div:hover .name-tool-tip{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.action-div .name-tool-tip{
+    top: 35px;
+}
+
+
+.comment-icon,
+.view-icon,
+.repost-icon,
+.like-icon,
+.bookmark-icon,
+.share-icon{
+    transition: fill 0.15s;
 }
 
 .options svg,
@@ -76,7 +103,6 @@
 .options {
     display: flex;
     align-items: center;
-    column-gap: 5px;
 }
 
 .user-details {
@@ -103,6 +129,7 @@
     border: 1px solid rgb(208, 208, 208);
     border-radius: 20px;
     margin-top: 15px;
+    transition: background-color 0.15s;
 }
 
 .sub-tweet-user-details{
@@ -145,4 +172,203 @@
     height: 291px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+}
+
+.comment-svg-container,
+.repost-svg-container,
+.like-svg-container,
+.view-svg-container{
+    padding-top: 1px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    margin-right: -3px;
+    transition: background-color 0.15s;
+}
+
+.action-div:hover .comment-icon,
+.action-div:hover .view-icon,
+.bookmark-svg-container:hover .bookmark-icon,
+.share-svg-container:hover .share-icon,
+.explain-svg-container:hover .explain-post-icon,
+.more-svg-container:hover .more-icon,
+.comment-div:hover,
+.view-div:hover{
+    fill: rgb(29, 161, 242);
+    color: rgb(29, 161, 242);
+}
+
+.action-div:hover .comment-svg-container,
+.action-div:hover .view-svg-container,
+.share-svg-container:hover,
+.explain-svg-container:hover,
+.more-svg-container:hover,
+.bookmark-svg-container:hover{
+    background-color: rgb(29, 161, 242,0.1);
+}
+
+.action-div:hover .repost-icon,
+.repost-div:hover{
+    fill: rgb(0, 186, 124);
+    color: rgb(0, 186, 124);
+}
+
+.action-div:hover .repost-svg-container{
+    background-color: rgba(0, 186, 124,0.1);
+}
+
+.action-div:hover .like-icon,
+.like-div:hover{
+    fill: rgb(226, 38, 77);
+    color: rgb(226, 38, 77);
+}
+
+.action-div:hover .like-svg-container{
+    background-color: rgba(226, 38, 77,0.1);
+}
+
+.share-svg-container,
+.bookmark-svg-container,
+.more-svg-container,
+.explain-svg-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.15s;
+}
+
+.general-tweet:hover{
+    background-color: rgb(247, 247, 247);
+}
+
+.sub-tweets:hover{
+    background-color: rgb(240, 240, 240);
+}
+
+.pfp-container{
+    position: relative;
+}
+
+.pfp-container:hover .tool-tip{
+    opacity: 1;
+    pointer-events: auto;
+    cursor: default;
+}
+
+.tool-tip{
+    opacity: 0;
+    pointer-events: none;
+    border: none;
+    border-radius: 15px;
+    padding: 16px;
+    width: 270px;
+    position: absolute;
+    background-color: white;
+    top: 50px;
+    left: -90px;
+    transition: opacity 0.15s;
+    box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 15px 0px, rgba(101, 119, 134, 0.15) 0px 0px 3px 1px; 
+}
+
+.user-details{
+    cursor: pointer;
+}
+
+.tool-tip-r1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tool-tip-pfp{
+    border: none;
+    border-radius: 50%;
+    width: 64px;
+    cursor: pointer;
+}
+
+.tool-tip-r3{
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    white-space: pre-line;
+}
+
+.tool-tip-r4{
+    color: gray;
+    display: flex;
+    font-size: 14px;
+}
+
+.following-count{
+    width: 120px;
+}
+
+.follower-count{
+    width: 1fr;
+}
+
+.grok-summary{
+    width: 20px;
+}
+
+.summary-button{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    background-color: white;
+    border: 1px solid rgb(208, 208, 208);
+    border-radius: 20px;
+    height: 36px;
+    column-gap: 5px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.summary-button:hover{
+    background-color: rgb(236, 236, 236);
+}
+
+.summary-button-container{
+    margin-top: 10px;
+}
+
+.explain-svg-container,
+.more-svg-container{
+    position: relative;
+}
+
+.explain-svg-container:hover .name-tool-tip,
+.more-svg-container:hover .name-tool-tip{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.explain-svg-container .name-tool-tip,
+.more-svg-container .name-tool-tip{
+    top: 35px;
+}
+
+.share-tool-tip,
+.bookmark-tool-tip{
+    top: 35px;
+}
+
+.share-svg-container:hover .share-tool-tip,
+.bookmark-svg-container:hover .bookmark-tool-tip{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.tool-tip{
+    z-index: 5;
 }

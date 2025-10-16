@@ -19,4 +19,25 @@
     align-items: center;
     font-weight: bold;
     font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.header-fyp:hover,
+.header-following:hover{
+    background-color: rgba(240, 240, 240, 0.85);
+}
+
+.header-following{
+    color: rgb(86, 86, 86);
+}
+
+.header-fyp::after{
+    content: ''; 
+    position: absolute;
+    bottom: 0px;
+    width: 55px; 
+    height: 4px;
+    background-color: rgb(29, 155, 240); 
+    border-radius: 2px;
 }
